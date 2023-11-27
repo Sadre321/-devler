@@ -2,6 +2,11 @@ create database okul_kutuphanesi;
 
 use okul_kutuphanesi;
 
+INSERT INTO uyeler(uye_adi, uye_soyadi, cinsiyet,adres_no,telefon,e_posta)
+VALUES ('Cabbar', 'Muhammed', 1, 3,223010710055, 'cm@mail.com');
+select * from uyeler where uye_adi = 'Cabbar';
+delete from uyeler where uye_adi = 'Cabbar'
+
 insert into kitap_yazar(isbn,yazar_no)
 values (6055947515,2),
 (6055937522,1),
@@ -134,6 +139,7 @@ values (1,'Merkez','Merkez Kütüphane'),
 
 insert into emanet(ýsbn,uye_no,kutuphane_no,emanet_tarihi,teslim_tarihi)
 values
+(223010710055,1,2,'2050-05-07','2453-14-05'),
 (6055937515,1,1,'2009-10-12','2009.10.17'),
 (6055937515,2,1,'2009-10-12','2009.10.17'),
 (6055937515,1,1,'2009-10-12','2009.10.17'),
@@ -148,6 +154,9 @@ values
 (6055937515,7,1,'2009-10-12','2009.10.17'),
 (6055937515,1,1,'2009-10-12','2009.10.17'),
 (6055937515,1,1,'2009-10-12','2009.10.17');
+
+select * from emanet where ýsbn=223010710055;
+delete from emanet where ýsbn=223010710055;
 
 insert into adresler(cadde,mahalle,bina_no,sehir,posta_kodu,ulke)
 values
